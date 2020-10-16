@@ -1,4 +1,4 @@
-// Include guards and C++ compatibility
+ // Include guards and C++ compatibility
 #ifndef MATRIX_H
 #define MATRIX_H
 #ifdef __cplusplus
