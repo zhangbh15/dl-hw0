@@ -102,12 +102,14 @@ void axpy_matrix(float a, matrix x, matrix y)
 // returns: new matrix that is the result
 matrix matmul(matrix a, matrix b)
 {
+    assert(a.cols == b.rows);
     matrix c = make_matrix(a.rows, b.cols);
     // TODO: 1.4 - Implement matrix multiplication. Make sure it's fast!
     int i, j, k;
+    int temp;
     for (i = 0; i < a.rows; ++i) {
-        for (j = 0; j < b.cols; ++j) {
-            for (k = 0 ; k < a.cols; ++k) {
+        for (k = 0 ; k < a.cols; ++k) {
+            for (j = 0; j < b.cols; ++j) {
                 c.data[i * b.cols + j] += a.data[i * a.cols + k] * b.data[k * b.cols + j];
             }
         }
