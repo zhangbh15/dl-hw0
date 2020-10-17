@@ -106,7 +106,6 @@ matrix matmul(matrix a, matrix b)
     matrix c = make_matrix(a.rows, b.cols);
     // TODO: 1.4 - Implement matrix multiplication. Make sure it's fast!
     int i, j, k;
-    int temp;
     for (i = 0; i < a.rows; ++i) {
         for (k = 0 ; k < a.cols; ++k) {
             for (j = 0; j < b.cols; ++j) {
